@@ -19,7 +19,14 @@ RSpec.describe 'Login page', :feature do
       end
 
       it 'allows visitor to sign in' do
-        expect(page).to have_selector "a", text: "Регистрация"
+        expect(page).to have_selector "a", text: "Sign up"
+      end
+
+      it 'redirects visitor to signup page' do
+        click_link('Sign up')
+        expect(page.status_code).to eq 200
+        expect(page).to have_selector "h2", text: "Sign up"
+        expect(page).to have_selector "form#new_user"
       end
     end
   end

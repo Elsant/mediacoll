@@ -20,6 +20,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem "rb-fsevent"
   gem "shoulda-matchers"
+  gem 'database_cleaner'
   gem 'capybara'
   gem "launchy"
   gem 'factory_girl_rails'
